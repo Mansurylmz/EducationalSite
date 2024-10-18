@@ -1,0 +1,39 @@
+@import "./variables";
+@import "./mixin";
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 9rem;
+    @include tel{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-text{
+        @include tel{
+            text-align: center;
+        }
+    }
+    .about-img{
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+    h5{
+        color: $main-color;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: $h2-font;
+        margin-bottom: 25px;
+    }
+    p{
+        font-size: $p-font;
+        color: $gray;
+        margin-bottom: 35px;
+    }
+}

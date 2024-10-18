@@ -1,0 +1,19 @@
+@mixin laptop(){
+    @media screen and (max-width:1200px) {
+        @content
+        
+    }
+}
+@mixin tel(){
+    @media screen and (max-width:1000px) {
+        @content
+        
+    }
+}
+
+@mixin tablet(){
+    @media screen and (max-width:500px) {
+        @content
+        
+    }
+}

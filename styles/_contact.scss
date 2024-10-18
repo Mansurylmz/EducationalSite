@@ -1,0 +1,60 @@
+@import "./mixin";
+.contact{
+    .contact-img{
+        @include laptop{
+            width: 90%;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+          }
+    }
+    .contact-text{
+        @include laptop{
+            display: flex;
+            flex-direction: column;
+        }
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        
+        gap: 20px;
+    }
+    .contact-form{
+        @include laptop{
+            width: 90%;
+        }
+        .btn-dark{
+            width: 100%;
+            background-color: #f8a041;
+            font-size: 16px;
+            color: $text-color;
+            padding: 10px;
+            border: none;
+            transition: all .5s;
+            border-radius: 5px;
+            &:hover {
+                background-color: #a48032;
+                color: $bg-color;
+              }
+            
+            
+        }
+        .contact-input{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            label{
+                margin-bottom: 10px;
+            }
+            input{
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 15px;
+            }
+        }
+    }
+}

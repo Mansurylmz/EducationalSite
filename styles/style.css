@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 27px 17px;
+  z-index: 10;
+}
+@media screen and (max-width: 500px) {
+  header {
+    justify-content: center;
+  }
+}
+header .logo {
+  font-size: 33px;
+  font-weight: 700;
+}
+header span {
+  color: #ffa343;
+}
+header .header-center ul {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  header .header-center ul li {
+    display: none;
+  }
+}
+header .header-center ul li a {
+  margin: 15px 22px;
+}
+header .header-center ul li a:hover {
+  color: #ffa343;
+  transition: all 0.5s;
+}
+header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  header .header-right {
+    display: none;
+  }
+}
+header .header-right a:hover {
+  color: #ffa343;
+  margin-top: -6px;
+}
+header .header-right .header-icon i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.home {
+  background: url("/img/group.jpeg");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.home .home-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home .home-text h5 {
+  font-size: 18px;
+  color: #ffa343;
+}
+.home .home-text h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1000px) {
+  .home .home-text h1 {
+    font-size: 3rem;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+}
+.home .home-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 35px;
+  color: rgba(255, 255, 255, 0.6705882353);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  align-items: center;
+  gap: 30px;
+}
+.content .row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.content .row .row-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.content .row .row-img img {
+  width: 100%;
+  display: block;
+  transition: all 0.5s;
+}
+.content .row .row-img img:hover {
+  transform: scale(1.2);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 9rem;
+}
+@media screen and (max-width: 1000px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-content .about-text {
+    text-align: center;
+  }
+}
+.about-content .about-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.about-content h5 {
+  color: #ffa343;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.about-content h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+.about-content p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6705882353);
+  margin-bottom: 35px;
+}
+
+.course h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+.course .course-row {
+  margin-bottom: 20px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+}
+.course .course-row .course-card {
+  position: relative;
+}
+.course .course-row .course-card .course-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  transition: all 0.5s;
+  filter: brightness(70%);
+}
+.course .course-row .course-card .course-img img:hover {
+  transform: scale(1.05);
+}
+.course .course-row .course-card .course-text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+.course .course-row .course-card .course-text p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.course .course-row .course-card .course-text i {
+  color: #ffa343;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact .contact-img {
+    width: 90%;
+  }
+}
+.contact .contact-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.contact .contact-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .contact .contact-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contact .contact-form {
+    width: 90%;
+  }
+}
+.contact .contact-form .btn-dark {
+  width: 100%;
+  background-color: #f8a041;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+.contact .contact-form .btn-dark:hover {
+  background-color: #a48032;
+  color: #000000;
+}
+.contact .contact-form .contact-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact .contact-form .contact-input label {
+  margin-bottom: 10px;
+}
+.contact .contact-form .contact-input input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  padding: 40px;
+}
+footer h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+footer .footer-text {
+  margin-bottom: 10px;
+}
+footer .footer-text a {
+  display: flex;
+  flex-direction: column;
+  color: #979797;
+  margin-bottom: 0.8rem;
+  transition: all 0.5s;
+}
+footer .footer-text a:hover {
+  transform: translateX(3px);
+  color: #ffa343;
+}
+footer .footer-social .footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: center;
+  background-color: #202020;
+  gap: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+footer .footer-social .footer-icons a:hover i {
+  color: #ffa343;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+section {
+  padding: 70px 17% 60px;
+}
+
+.btn {
+  background-color: #ffa343;
+  color: black;
+  padding: 13px 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 1000px) {
+  .btn {
+    padding: 10px 15px;
+  }
+}
+.btn:hover {
+  border: 2px solid #ffffff;
+  transform: translateX(10px);
+  background-color: transparent;
+  color: #ffffff;
+  transition: all 0.5s;
+}/*# sourceMappingURL=style.css.map */
